@@ -1,0 +1,264 @@
+// NOTE: Sir, I have done my best to achieve the required task but honestly speaking I have to learn a lot about Front End. I hope I was able to deliver somewhat. Your feedbacks will valuable.
+
+$main-color: #f06727;
+$btn-1: #f5aa31;
+$btn-2: #fa944b;
+
+
+$border-radius: 2rem;
+$component-active-bg: $btn-2;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+.left_panel {
+    background-color: #f3efef;
+    background-image: url(../resource/bg.png);
+    background-size: cover;
+    background-blend-mode: soft-light;
+    height: 100vh;
+
+    .banner-container {
+        height: 100vh;
+    }
+    
+    
+    // Enabling scrollbar for the left panel and hiding the scrollbar for Firefox Browser
+    .content-wrapper {
+        width: 100%;
+        overflow-y: scroll;
+        scrollbar-width: 0;
+    
+        // First content div
+        .content-first {
+            background-color: #fff;
+            height: auto;
+    
+            .logo-container {
+    
+                .main-logo {
+                    img {
+                        width: 100%;
+                    }
+                }
+    
+                .sanofi-logo {
+                    padding: 2% 3%;
+                    height: 1%;
+                    background-color: #efe8e8;
+                }
+            }
+    
+            .main-text {
+    
+                .main-text-info {
+                    margin: 3% 0 2% 0;
+                }
+    
+                h2 {
+                    width: 95%;
+                    background-color: $main-color;
+                    padding: 3%;
+                    color: #fff;
+                    font-weight: bold;
+                    clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+                }
+    
+    
+                .main-text-time {
+                    margin: 2% 0 3% 0;
+                    color: $main-color;
+                    font-weight: bold;
+                }
+    
+            }
+        }
+    
+        // second content div
+        .content-second {
+            height: auto;
+            
+            .img-fluid {
+                width: 200px;
+                height: 200px;
+            }
+
+            .speaker{
+                .specker-info {
+                    .speaker-heading{
+                        padding: .8rem;
+                        color: #fff;
+                        width: 60%;
+                        background-color: $main-color;
+                        clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+                        
+                    }
+                    .speaker-name{
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                    p{
+                        width: 80%;
+                    }
+                }
+            
+            }
+
+            .moderator{
+                .moderator-info{
+                    text-align: end;
+                    .moderator-heading{
+                        padding: .8rem;
+                        color: #fff;
+                        width: 60%;
+                        background-color: $btn-1;
+                        clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
+                    }
+                    .moderator-name{
+                        width: 80%;
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                    p{
+                        width: 80%;
+                    }
+                }
+            
+            }
+
+        }
+    
+        // Third Content div
+        .content-third {
+            background-color: #fff;
+            height: auto;
+
+            .disclaimer-text{
+                font-size: 14px;
+            }
+            
+            .content-third-footer{
+
+                .sonafi-container{
+                    img{
+                        width: 25%;
+                    }
+                }
+                
+                .clirnet-container{
+                    img{
+                        width: 110%;
+                    }
+                }
+            }
+        }
+    }
+
+    // hiding scrollbar for all the web browsers except Firefox
+    .content-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+}
+
+
+
+//  Right panel - Form div
+
+.right_panel{
+    background-color: $main-color;
+
+    .form-container{
+        height: 100%;
+
+        .form-info{
+            width: 65%;
+
+            .i-icon{
+                background-color: #fff;
+                width: 40px;
+                height: 35px;
+                border: 3px solid #fa905f;
+                border-radius: 50%;
+                margin-right: 3%;
+            }
+
+            p{  
+                width: 23rem;
+                font-size: 12px;
+                color: #fff;
+            }
+        }
+
+
+        .actual-form{
+            width: 75%;
+
+            form{
+
+                input::placeholder{
+                    color: #000;
+                    font-size: 14px;
+                    font-weight:500;
+                }
+                
+                .custome-select{
+                    select{
+                        width: 6rem;
+                        border-radius: .5rem 0 0 .5rem;
+                        font-size: 14px;
+                        font-weight:500;
+                    }
+                    input{
+                        border-radius: 0 .5rem .5rem 0;
+                    }
+               }
+
+               .custome-btn{
+                    .custom-color-1{
+                        background-color: $btn-1;
+                        border-color: $btn-1;
+                        height: 3rem;
+                        font-size: 12px;
+                        border-radius: .5rem;
+                      
+                    }
+                    .custom-color-2{
+                        background-color: $btn-2;
+                        border-color: $btn-2;
+                        height: 2.3rem;
+                        font-size: 12px;
+                        border-radius: .5rem;
+                    }
+               }
+
+               .form-check{
+                    color: #fff;
+
+                    label{
+                        font-size: 12px;
+
+                        span{
+                            color:#fae1b9;
+                        }
+                    }
+               }
+            
+            }
+        }
+    }
+}
+
+
+
+
